@@ -24,3 +24,4 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-xpath');
+require ('cypress-real-events');

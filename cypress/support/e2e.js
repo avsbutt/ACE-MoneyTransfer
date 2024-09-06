@@ -13,8 +13,24 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+
+Cypress.Commands.add("dragTo", { prevSubject: "element" }, (subject, targetEl) => {
+    const dataTransfer = new DataTransfer(); 
+    cy.get(subject).trigger('dragstart',{
+       dataTransfer 
+      });
+    cy.get(targetEl).trigger('drop',{
+         dataTransfer
+    })
+  }
+);
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+import 'cypress-file-upload';
+import 'cypress-real-events';
+import 'cypress-iframe';

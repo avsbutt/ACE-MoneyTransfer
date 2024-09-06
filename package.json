@@ -3,17 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "npm run clean:allure && npx cypress run --browser=chrome --headed --spec 'cypress/e2e/TestCases/**/*.cy.js' --reporter mocha-allure-reporter",
+    "report:allure": "allure generate \"allure-results\" --clean -o \"allure-report\" && allure open \"allure-report\"",
+    "clean:allure": "rimraf allure-results allure-report",
+    "browser:chrome": "npx cypress run --browser=chrome --headed --spec 'cypress/e2e/TestCases/*/.cy.js' --reporter mocha-allure-reporter",
+    "browser:edge": "npx cypress run --browser=edge --headed --spec 'cypress/e2e/TestCases/*/.cy.js' --reporter mocha-allure-reporter",
+    "browser:electron": "npx cypress run --browser=electron --headed --spec 'cypress/e2e/TestCases/*/.cy.js' --reporter mocha-allure-reporter",
+    "browser:firefox": "npx cypress run --browser=firefox --headed --spec 'cypress/e2e/TestCases/*/.cy.js' --reporter mocha-allure-reporter",
+    "test:all-browsers": "npm run browser:chrome & npm run browser:edge & npm run browser:electron & npm run browser:firefox"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
     "cypress": "^13.14.1",
-    "cypress-xpath": "^2.0.1"
+    "cypress-iframe": "^1.0.1",
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "dependencies": {
-    "cypress-iframe": "^1.0.1"
+    "cypress-real-events": "^1.13.0"
   }
 }
