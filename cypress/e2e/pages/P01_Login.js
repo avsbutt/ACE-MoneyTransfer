@@ -19,9 +19,5 @@ export class P01_LoginClass {
     VerifyLoginIsSuccess(){
         cy.xpath(LoginLocators.ChatIconLoc).should('be.visible')
     }
-    ChatWiththeAgent(){
-        cy.xpath(LoginLocators.ChatIconLoc).click()
-        cy.xpath(LoginLocators.ChatAgent).click()
-        cy.xpath(LoginLocators.OtherRequest).click()
-    }
+
 }

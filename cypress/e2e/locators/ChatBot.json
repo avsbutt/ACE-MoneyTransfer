@@ -1,0 +1,8 @@
+{    
+    "ChatbotLocators":
+    {
+        "ChatIconLoc":"//div[@id='chat-icon-main']",
+        "ChatAgentLoc":"//span[@class='category-content-wrap theme-1']",
+        "OtherRequestLoc":"//*[@id='autoReply']/div[5]/div[1]"
+    }
+}
