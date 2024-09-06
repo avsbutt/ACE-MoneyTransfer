@@ -1,7 +1,0 @@
-{
-    "hrmlocator":
-    {
-        "username":"//input[@placeholder='Username']",
-        "password":"//input[@placeholder='Password']"
-    }
-}

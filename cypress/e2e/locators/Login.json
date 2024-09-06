@@ -1,0 +1,12 @@
+{
+    "LoginLocators":
+    {
+        "HomepageLoginBtnLoc":"//a[@class='btn btn-outline-secondary mr-sm-2 ff-roboto fs-16 header-btn-padding']",
+        "EmailLoc":"#email",
+        "PasswordLoc":"#password",
+        "LoginBtn":"//button[@id='login']",
+        "ChatIconLoc":"//div[@id='chat-icon-main']",
+        "ChatAgent":"//span[@class='category-content-wrap theme-1']",
+        "OtherRequest":"//*[@id='autoReply']/div[5]/div[1]"
+    }
+}

@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/TestCases/**/*.cy.js",  
-    //baseUrl:"",
+    baseUrl:"https://acemoneytransfer.com",
 
 
   
@@ -20,7 +20,7 @@ module.exports = defineConfig({
     video: false,
     videosFolder: 'cypress/e2e/videos',
     screenshotsFolder: 'cypress/e2e/screenshots',
-    pageLoadTimeout:60000 ,
+    pageLoadTimeout:120000,
     screenshots: false,
     viewportWidth: 1280,
     viewportHeight: 800,
